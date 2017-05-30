@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Store
+    class Bank
     {
-        double lemonPrice = .85;
-        double sugarPrice = .70;
-        
-        
+        public void playerbank()
+        {
+            Console.WriteLine("Welcome to your piggy bank!");
+            Console.Read();
+
+        }
+
 
     }
 }

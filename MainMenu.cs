@@ -10,6 +10,14 @@ namespace Lemonade_Stand
     {
         public void StartGame()
         {
+            PlayerUI playermenu = new PlayerUI();
+
+            Console.WriteLine("Welcome to lemonade stand. Type 'start' to begin playing.");
+            string startGame = Console.ReadLine();
+            if (startGame == "start")
+            {
+                playermenu.PlayersUI();
+            }
 
 
         }
