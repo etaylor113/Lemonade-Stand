@@ -15,9 +15,11 @@ namespace Lemonade_Stand
             StoreMenu travelStore = new StoreMenu();
             PlayerItems travelItems = new PlayerItems();
             Bank travelBank = new Bank();
+            Weather travelweather = new Weather();
 
-            Console.WriteLine("Type number to navigate. \n'1' - store \n'2' - current inventory \n'3' - piggy bank");
-            int navigate = Int32.Parse(Console.ReadLine());
+            int navigate;
+            Console.WriteLine("\nType number to navigate. \n'1' - store \n'2' - current inventory \n'3' - piggy bank \n'4' - weather forecast");
+            navigate = Int32.Parse(Console.ReadLine());
             switch(navigate)
             {
                 case 1:
@@ -28,6 +30,9 @@ namespace Lemonade_Stand
                     break;
                 case 3:
                     travelBank.playerbank();
+                    break;
+                case 4:
+                    travelweather.getTemperature();
                     break;
                 default:
                     Console.WriteLine("Not a valid command.");
