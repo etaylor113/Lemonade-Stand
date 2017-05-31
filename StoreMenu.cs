@@ -12,18 +12,22 @@ namespace Lemonade_Stand
         public void getItems()
         {
             StoreItems gotoStore = new StoreItems();
+            PlayerUI travelUI = new PlayerUI();
 
-            Console.WriteLine("Welcome to the store! Would you like to buy cups, lemons, or sugar? \nType 'cups', 'lemons', or 'sugar'");
-            string productChoice = Console.ReadLine();
+            Console.WriteLine("Welcome to the store! Would you like to buy cups, lemons, or sugar? \nType number to navigate \n'0' - return to main screen \n'1' - cups \n'2' - lemons \n'3' - sugar");
+            int productChoice = Int32.Parse(Console.ReadLine());
             switch (productChoice)
             {
-                case "cups":
+                case 0:
+                    travelUI.PlayersUI();
+                    break;
+                case 1:
                     gotoStore.cupStoreItems();
                     break;
-                case "sugar":
+                case 2:
                     gotoStore.sugarStoreItems();
                     break;
-                case "lemons":
+                case 3:
                     gotoStore.lemonStoreItems();
                     break;
                 default:

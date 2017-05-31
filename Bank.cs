@@ -10,7 +10,10 @@ namespace Lemonade_Stand
     {
         public void playerbank()
         {
+
+            double playerMoney = 20.00;
             Console.WriteLine("Welcome to your piggy bank!");
+            Console.WriteLine("Your current wallet amount is $" + playerMoney);
             Console.Read();
 
         }

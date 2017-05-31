@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bank.cs" />
+    <Compile Include="goBankrupt.cs" />
     <Compile Include="PlayerItems.cs" />
     <Compile Include="StoreItems.cs" />
     <Compile Include="StoreMenu.cs" />
