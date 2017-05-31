@@ -16,7 +16,7 @@ namespace Lemonade_Stand
             string startGame = Console.ReadLine();
             if (startGame == "start")
             {
-                playermenu.PlayersUI();
+                playermenu.getItems();
             }
 
 

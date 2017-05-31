@@ -6,18 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    public class StoreItems 
+    class getIce
     {
-        PiggyBank bank = new PiggyBank();
-        PlayerUI travelUI = new PlayerUI();
-        
-
-       
-
-      
-
-
-
-
     }
 }

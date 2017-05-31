@@ -10,6 +10,8 @@ namespace Lemonade_Stand
     {
         public void getItems()
         {
+
+
             Console.WriteLine("Welcome to your inventory!");
             Console.Read();
 

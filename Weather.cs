@@ -52,22 +52,22 @@ namespace Lemonade_Stand
                     int randtemp;
                     randtemp = random.Next(60, 101);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.PlayersUI();
+                    travelUI.getItems();
                     break;
                 case "clear":
                     randtemp = random.Next(60, 81);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.PlayersUI();
+                    travelUI.getItems();
                     break;
                 case "cloudy":
                     randtemp = random.Next(50, 71);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.PlayersUI();
+                    travelUI.getItems();
                     break;
                 case "rainy":
                     randtemp = random.Next(40, 61);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.PlayersUI();
+                    travelUI.getItems();
                     break;
                 default:
                     getTemperature();

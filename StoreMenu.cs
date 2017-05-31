@@ -19,16 +19,19 @@ namespace Lemonade_Stand
             switch (productChoice)
             {
                 case 0:
-                    travelUI.PlayersUI();
-                    break;
+                  travelUI.getItems();
+                    break; 
                 case 1:
                     gotoStore.cupStoreItems();
+                    getItems();
                     break;
                 case 2:
-                    gotoStore.sugarStoreItems();
+                    gotoStore.lemonStoreItems();
+                    getItems();
                     break;
                 case 3:
-                    gotoStore.lemonStoreItems();
+                    gotoStore.sugarStoreItems(travelUI.travelBank);
+                    getItems();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid product name.");
