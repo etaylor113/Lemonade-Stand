@@ -35,7 +35,8 @@ namespace Lemonade_Stand
                     Console.WriteLine("The forecast calls for rain and cool weather.");
                     return todaysWeather;
                 default:
-                    Console.WriteLine("An error has occurred.");                  
+                    Console.WriteLine("An error has occurred.");
+                    Console.Read();                
                     getRandomWeather();
                     return getRandomWeather();
             }                
@@ -43,7 +44,7 @@ namespace Lemonade_Stand
 
         public void getTemperature()
         {
-            PlayerUI travelUI = new PlayerUI();
+           
             Random random = new Random();
             string todaysWeather = getRandomWeather();
             switch (todaysWeather)
@@ -52,22 +53,22 @@ namespace Lemonade_Stand
                     int randtemp;
                     randtemp = random.Next(60, 101);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.getItems();
+                    Console.Read();
                     break;
                 case "clear":
                     randtemp = random.Next(60, 81);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.getItems();
+                    Console.Read();
                     break;
                 case "cloudy":
                     randtemp = random.Next(50, 71);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.getItems();
+                    Console.Read();
                     break;
                 case "rainy":
                     randtemp = random.Next(40, 61);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    travelUI.getItems();
+                    Console.Read();
                     break;
                 default:
                     getTemperature();

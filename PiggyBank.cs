@@ -16,6 +16,7 @@ namespace Lemonade_Stand
         public void DisplayPlayerMoney()
         {
             Console.WriteLine("Your current balance is $" + playerMoney);
+            Console.Read();
         }
 
 

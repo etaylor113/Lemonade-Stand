@@ -43,12 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers.cs" />
+    <Compile Include="Day.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="getCups.cs" />
+    <Compile Include="getIce.cs" />
+    <Compile Include="getLemons.cs" />
+    <Compile Include="getSugar.cs" />
     <Compile Include="goBankrupt.cs" />
     <Compile Include="PiggyBank.cs" />
-    <Compile Include="PlayerItems.cs" />
-    <Compile Include="StoreItems.cs" />
-    <Compile Include="StoreMenu.cs" />
-    <Compile Include="PlayerUI.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Store.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainMenu.cs" />

@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class PlayerItems
+    public class Inventory
     {
-        public void getItems()
+
+        public void getInventory()
         {
-
-
             Console.WriteLine("Welcome to your inventory!");
             Console.Read();
+
+
 
         }
 

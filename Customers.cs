@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    public class StoreItems 
+    class Customers
     {
-        PiggyBank bank = new PiggyBank();
-        PlayerUI travelUI = new PlayerUI();
-        
+        public void getCustomers()
+        {
+            Console.WriteLine("These are your customers.");
 
-       
-
-      
-
+        }
 
 
 

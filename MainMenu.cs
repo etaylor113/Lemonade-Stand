@@ -10,13 +10,17 @@ namespace Lemonade_Stand
     {
         public void StartGame()
         {
-            PlayerUI playermenu = new PlayerUI();
-
             Console.WriteLine("Welcome to lemonade stand. You will start off with $20 in your piggy bank. If at any point you run out of money, you can declare bankrupcy and quit the game. \nType 'start' to begin playing.");
             string startGame = Console.ReadLine();
             if (startGame == "start")
             {
-                playermenu.getItems();
+                Game game = new Game();
+                game.startgame();
+            }
+            else
+            {
+                Console.WriteLine("Invalid command entered. Try again.");
+                StartGame();
             }
 
 
