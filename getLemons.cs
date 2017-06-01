@@ -12,7 +12,7 @@ namespace Lemonade_Stand
         {
             Console.WriteLine("Lemons are 85 cents a piece. How many would you like to buy? \nType number for quantity.");
             int lemonQuantity = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("You have purchased " + lemonQuantity + " lemons.");
+            Console.WriteLine("You have purchased " + lemonQuantity + " lemons");
             return lemonQuantity;
         }
 

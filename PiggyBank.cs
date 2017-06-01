@@ -22,18 +22,13 @@ namespace Lemonade_Stand
             switch (goBackToPlayerUI)
             {
                 case 0:
-                    goBackToUI();
+                    
                     break;
                 default:
                     DisplayPlayerMoney();
                     break;
             }
         }
-        private void goBackToUI()
-        {
-            Game game = new Game();
-            game.startgame();
-        }
-
+      
     }
 }

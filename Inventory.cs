@@ -11,9 +11,9 @@ namespace Lemonade_Stand
 
 
         public static int totalCups;
-        public int totalLemons;
-        public int totalSugar;
-        public int totalIceCubes;
+        public static int totalLemons;
+        public static int totalSugar;
+        public static int totalIceCubes;
         
             public Inventory()
         {
@@ -32,7 +32,7 @@ namespace Lemonade_Stand
             switch (goBackToPlayerUI)
             {
                 case 0:
-                    goBackToUI();
+                    
                     break;
                 default:
                     getInventory();
@@ -40,11 +40,7 @@ namespace Lemonade_Stand
             }
         }
 
-        private void goBackToUI()
-        {
-            Game game = new Game();
-            game.startgame();
-        }
+        
 
 
     }
