@@ -19,9 +19,18 @@ namespace Lemonade_Stand
             double total = iceCubeQuantity * iceCubePrice;
             if (total < PiggyBank.playerMoney)
             {
-                Console.WriteLine("You have purchased " + iceCubeQuantity + " ice cubes for $" + total);
+                Console.WriteLine("You have purchased " + iceCubeQuantity + " ice cubes for $" + total + "\nType '0' to return to UI.");
+                int returnUI = Int32.Parse(Console.ReadLine());
                 PiggyBank.playerMoney -= total;
                 Inventory.totalIceCubes += iceCubeQuantity;
+                switch (returnUI)
+                {
+                    case 0:
+                        break;
+                    default:
+                        getStoresIce();
+                        break;
+                }
 
             }
             else

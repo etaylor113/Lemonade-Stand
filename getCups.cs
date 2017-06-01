@@ -23,25 +23,20 @@ namespace Lemonade_Stand
                 int returnUI = Int32.Parse(Console.ReadLine());
                 PiggyBank.playerMoney -= total;
                 Inventory.totalCups += cupQuantity;
-
                 switch (returnUI)
                 {
                     case 0:
-
                         break;
                     default:
                         getStoresCups();
                         break;
-
                 }
-
             }
             else
             {
                 Console.WriteLine("Insufficent funds.");
                 Console.Read();
                 Console.Clear();
-
             }
             Console.Clear();
         }

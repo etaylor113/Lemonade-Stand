@@ -17,7 +17,7 @@ namespace Lemonade_Stand
             while (day.gotoNextDay() == true)
             {
                 int personNav;
-                Console.WriteLine("What would you like to do? Type number to navigate. \n'1' - Go to inventory \n'2' - Go to wallet \n'3' - Go shopping \n'4' - check forecast \n'5' - Go to next day \n'6' - File for bankrupcy(quit game)");
+                Console.WriteLine("What would you like to do? Type number to navigate. \n'1' - Go to inventory \n'2' - Go to wallet \n'3' - Go shopping \n'4' - Check forecast \n'5' - Go to next day \n'6' - File for bankrupcy (quit game)");
                 personNav = Int32.Parse(Console.ReadLine());
                 Console.Clear();
                 switch (personNav)

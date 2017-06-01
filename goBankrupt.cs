@@ -15,6 +15,7 @@ namespace Lemonade_Stand
             MainMenu travelMainMenu = new MainMenu();
             Console.WriteLine("You've declared bankrupcy! Would you like to play again and beat your score? \nType number to navigate \n'1' - yes \n'2'- no");
             navigate = Int32.Parse(Console.ReadLine());
+
             switch (navigate)
             {
                 case 1:
@@ -27,7 +28,7 @@ namespace Lemonade_Stand
                     declarebankrupcy();
                     break;
             }
-
+            Console.Clear();
         }
 
 
