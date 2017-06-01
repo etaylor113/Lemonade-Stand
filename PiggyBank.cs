@@ -8,17 +8,32 @@ namespace Lemonade_Stand
 {
     public class PiggyBank
     {
-        public double playerMoney;
+        public static double playerMoney = 20;
         public PiggyBank()
         {
             playerMoney = 20.00;
+            
         }
         public void DisplayPlayerMoney()
         {
-            Console.WriteLine("Your current balance is $" + playerMoney);
-            Console.Read();
+            Console.WriteLine("Your current balance is $" + playerMoney + "\nType '0' to go back.");
+            int goBackToPlayerUI = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            switch (goBackToPlayerUI)
+            {
+                case 0:
+                    goBackToUI();
+                    break;
+                default:
+                    DisplayPlayerMoney();
+                    break;
+            }
         }
-
+        private void goBackToUI()
+        {
+            Game game = new Game();
+            game.startgame();
+        }
 
     }
 }

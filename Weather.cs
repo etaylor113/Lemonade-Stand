@@ -10,13 +10,13 @@ namespace Lemonade_Stand
     {
 
         public string getRandomWeather()
-        { 
+        {
             int randweather;
             Random random = new Random();
             randweather = random.Next(1, 5);
-            
+
             switch (randweather)
-            {             
+            {
                 case 1:
                     string todaysWeather;
                     todaysWeather = "sunny";
@@ -36,15 +36,15 @@ namespace Lemonade_Stand
                     return todaysWeather;
                 default:
                     Console.WriteLine("An error has occurred.");
-                    Console.Read();                
+                    Console.Read();
                     getRandomWeather();
                     return getRandomWeather();
-            }                
+            }
         }
 
         public void getTemperature()
         {
-           
+
             Random random = new Random();
             string todaysWeather = getRandomWeather();
             switch (todaysWeather)
@@ -53,31 +53,47 @@ namespace Lemonade_Stand
                     int randtemp;
                     randtemp = random.Next(60, 101);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    Console.Read();
+                    gobackToUI();
                     break;
                 case "clear":
                     randtemp = random.Next(60, 81);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    Console.Read();
+                    gobackToUI();
                     break;
                 case "cloudy":
                     randtemp = random.Next(50, 71);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    Console.Read();
+                    gobackToUI();
                     break;
                 case "rainy":
                     randtemp = random.Next(40, 61);
                     Console.WriteLine("The temperature today is " + randtemp);
-                    Console.Read();
+                    gobackToUI();
                     break;
                 default:
                     getTemperature();
                     break;
+            }
+        }
 
+        private void gobackToUI()
+        {
+            Game game = new Game();
+
+            Console.WriteLine("Type '0' to go back.");
+            int goBack = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            switch (goBack)
+            {
+                case 0:
+                    game.startgame();
+                    break;
+                default:
+                    gobackToUI();
+                    break;
             }
 
         }
-
 
 
     }

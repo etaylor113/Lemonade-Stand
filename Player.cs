@@ -8,8 +8,8 @@ namespace Lemonade_Stand
 {
     public class Player
     {
-        Inventory inventory = new Inventory();
-        PiggyBank piggyBank = new PiggyBank();
+       public  Inventory inventory = new Inventory();
+       public PiggyBank piggyBank = new PiggyBank();
         public void getPlayerInventory()
         {
             inventory.getInventory();

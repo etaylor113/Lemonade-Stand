@@ -14,10 +14,23 @@ namespace Lemonade_Stand
         Customers customers = new Customers();
 
 
-        public void gotoNextDay()
+        public bool gotoNextDay()
         {
-            Console.WriteLine("Its the next day!");
-            Console.Read();
+            Console.WriteLine("Type '0' to go to next day.");
+            int gotoNextDay = Int32.Parse(Console.ReadLine());
+                if (gotoNextDay == 0)
+            {
+                
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+          
+            
+
+            
         }
 
 
