@@ -16,25 +16,35 @@ namespace Lemonade_Stand
 
         public bool gotoNextDay()
         {
-            bool goNext;
-            Console.WriteLine("Type '1' to go to UI, or type '2' to continue on to the next day.");
-            int nextDayChoice = Int32.Parse(Console.ReadLine());
-            Console.Clear();
-            switch (nextDayChoice)
+            try
             {
-                case 1:
-                    goNext = true;
-                    return goNext;
-                case 2:
-                    goNext = false;
-                    return goNext;
-                default:
-                    return gotoNextDay();
+                bool goNext;
+                Console.WriteLine("Type '1' to go to UI, or type '2' to continue on to the next day.");
+                int nextDayChoice = Int32.Parse(Console.ReadLine());
+                Console.Clear();
+                switch (nextDayChoice)
+                {
+                    case 1:
+                        goNext = true;
+                        return goNext;
+                    case 2:
+                        goNext = false;
+                        return goNext;
+                    default:
+                        return gotoNextDay();
+                }
+            }
+            catch
+            {
+                Console.Clear();
+                gotoNextDay();
+                return gotoNextDay();
+            }
 
-            }  
         }
 
-        
+
+
 
         public void getWeather()
         {

@@ -13,12 +13,12 @@ namespace Lemonade_Stand
 
             double sugarPrice = .70;
 
-            Console.WriteLine("Sugar is 70 cents a bag. How many would you like to buy? \nType number for quantity.");
+            Console.WriteLine("Sugar is 70 cents a packet. How many would you like to buy? \nType number for quantity.");
             int sugarQuantity = Int32.Parse(Console.ReadLine());
             double total = sugarQuantity * sugarPrice;
             if (total < PiggyBank.playerMoney)
             {
-                Console.WriteLine("You have purchased " + sugarQuantity + " bags of sugar for $" + total + "\nType '0' to return to UI.");
+                Console.WriteLine("You have purchased " + sugarQuantity + " packets of sugar for $" + total + "\nType '0' to return to UI.");
                 int returnUI = Int32.Parse(Console.ReadLine());
                 PiggyBank.playerMoney -= total;
                 Inventory.totalSugar += sugarQuantity;

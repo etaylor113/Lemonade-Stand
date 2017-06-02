@@ -36,6 +36,7 @@ namespace Lemonade_Stand
 
             catch
             {
+                Console.Clear();
                 DisplayPlayerMoney();
             }
         }
