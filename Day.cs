@@ -11,7 +11,7 @@ namespace Lemonade_Stand
     class Day
     {
         Weather weather = new Weather();
-        Customers customers = new Customers();
+        CustomerPreferences customers = new CustomerPreferences();
 
 
         public bool gotoNextDay()

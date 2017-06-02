@@ -42,7 +42,7 @@ namespace Lemonade_Stand
             }
         }
 
-        public void getTemperature()
+        public int getTemperature()
         {
             Random random = new Random();
             string todaysWeather = getRandomWeather();
@@ -53,25 +53,25 @@ namespace Lemonade_Stand
                     randtemp = random.Next(60, 101);
                     Console.WriteLine("The temperature today is " + randtemp);
                     gobackToUI();
-                    break;
+                    return randtemp;
                 case "clear":
                     randtemp = random.Next(60, 81);
                     Console.WriteLine("The temperature today is " + randtemp);
                     gobackToUI();
-                    break;
+                    return randtemp;
                 case "cloudy":
                     randtemp = random.Next(50, 71);
                     Console.WriteLine("The temperature today is " + randtemp);
                     gobackToUI();
-                    break;
+                    return randtemp;
                 case "rainy":
                     randtemp = random.Next(40, 61);
                     Console.WriteLine("The temperature today is " + randtemp);
                     gobackToUI();
-                    break;
+                    return randtemp;
                 default:
-                    getTemperature();
-                    break;
+                    return getTemperature();
+                     
             }
         }
 

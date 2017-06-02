@@ -18,7 +18,7 @@ namespace Lemonade_Stand
             numLemons = 0;
             numSugar = 0;
             numIceCubes = 0;
-            pricePerCup = 1.00;
+            pricePerCup = 0;
         }
 
 

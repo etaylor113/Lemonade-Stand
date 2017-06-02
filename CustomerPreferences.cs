@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Customers
+    class CustomerPreferences
     {
         public void getCustomers()
         {
             Console.WriteLine("These are your customers.");
 
-            List<string> customers = new List<string>();
+
+           
+
 
 
 
