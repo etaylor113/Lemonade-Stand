@@ -51,6 +51,7 @@
     <Compile Include="getLemons.cs" />
     <Compile Include="getSugar.cs" />
     <Compile Include="goBankrupt.cs" />
+    <Compile Include="MyRecipe.cs" />
     <Compile Include="PiggyBank.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Inventory.cs" />

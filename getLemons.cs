@@ -34,7 +34,8 @@ namespace Lemonade_Stand
             {
                 Console.WriteLine("Insufficent funds.");
                 Console.Read();
-                Console.Clear();
+                getStoresLemons();
+
             }
             Console.Clear();
         }

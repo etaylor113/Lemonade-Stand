@@ -14,21 +14,30 @@ namespace Lemonade_Stand
             playerMoney = 20.00;
             
         }
+
+        
         public void DisplayPlayerMoney()
         {
-            Console.WriteLine("Your current balance is $" + playerMoney + "\nType '0' to go back.");
-            int goBackToPlayerUI = Int32.Parse(Console.ReadLine());
-            Console.Clear();
-            switch (goBackToPlayerUI)
+            try
             {
-                case 0:
-                    
-                    break;
-                default:
-                    DisplayPlayerMoney();
-                    break;
+                Console.WriteLine("Your current balance is $" + playerMoney + "\nType '0' to go back.");
+                int goBackToPlayerUI = Int32.Parse(Console.ReadLine());
+                Console.Clear();
+                switch (goBackToPlayerUI)
+                {
+                    case 0:
+
+                        break;
+                    default:
+                        DisplayPlayerMoney();
+                        break;
+                }
+            }
+
+            catch
+            {
+                DisplayPlayerMoney();
             }
         }
-      
     }
 }

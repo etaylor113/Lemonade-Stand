@@ -12,6 +12,10 @@ namespace Lemonade_Stand
         {
             Console.WriteLine("These are your customers.");
 
+            List<string> customers = new List<string>();
+
+
+
         }
 
 

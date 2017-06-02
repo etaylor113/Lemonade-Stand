@@ -8,8 +8,6 @@ namespace Lemonade_Stand
 {
     public class Inventory
     {
-
-
         public static int totalCups;
         public static int totalLemons;
         public static int totalSugar;
