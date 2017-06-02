@@ -44,7 +44,6 @@ namespace Lemonade_Stand
 
         public void getTemperature()
         {
-
             Random random = new Random();
             string todaysWeather = getRandomWeather();
             switch (todaysWeather)

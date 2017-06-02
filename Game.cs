@@ -35,7 +35,7 @@ namespace Lemonade_Stand
                             store.gotoStore();
                             break;
                         case 4:
-                            myRecipe.getMyRecipe();
+                            myRecipe.recipeMenu();
                             break;
                         case 5:
                             day.getWeather();
