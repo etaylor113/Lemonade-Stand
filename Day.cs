@@ -33,15 +33,7 @@ namespace Lemonade_Stand
                         goNext = false;
                         getWeather();
                         getCustomers();
-                        int lemonPref = customers.getCustomerLemonPref();
-                            if (lemonPref == 5)
-                        {
-                            
-                        }
-                        int sugarPref = customers.getCustomerSugarPref();
-                        int iceCubePref = customers.getCustomerIceCubePref();
-                        int pricePref = customers.getCustomerPricePref();
-
+                        gotoNextDay();
                         return goNext;
                     default:
                         return gotoNextDay();

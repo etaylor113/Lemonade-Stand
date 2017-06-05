@@ -8,30 +8,31 @@ namespace Lemonade_Stand
 {
     public class Weather
     {
-
-        public string getRandomWeather()
+        static public int todaysWeather;
+        static public int todaysTemperature;
+        public int getRandomWeather()
         {
-            int randweather;
+            
             Random random = new Random();
-            randweather = random.Next(1, 5);
+            todaysWeather = random.Next(1, 5);
 
-            switch (randweather)
+            switch (todaysWeather)
             {
                 case 1:
-                    string todaysWeather;
-                    todaysWeather = "sunny";
+                    int todaysWeather;
+                    todaysWeather = 1;
                     Console.WriteLine("The forecast calls for sunny skies and hot weather.");
                     return todaysWeather;
                 case 2:
-                    todaysWeather = "clear";
+                    todaysWeather = 2;
                     Console.WriteLine("The forecast calls for clear skies and warm weather.");
                     return todaysWeather;
                 case 3:
-                    todaysWeather = "cloudy";
+                    todaysWeather = 3;
                     Console.WriteLine("The forecast calls for cloudy skies and cool weather.");
                     return todaysWeather;
                 case 4:
-                    todaysWeather = "rainy";
+                    todaysWeather = 4;
                     Console.WriteLine("The forecast calls for rain and cool weather.");
                     return todaysWeather;
                 default:
@@ -45,30 +46,30 @@ namespace Lemonade_Stand
         public int getTemperature()
         {
             Random random = new Random();
-            string todaysWeather = getRandomWeather();
+            int todaysWeather= getRandomWeather();
             switch (todaysWeather)
             {
-                case "sunny":
-                    int randtemp;
-                    randtemp = random.Next(60, 101);
-                    Console.WriteLine("The temperature today is " + randtemp);
+                case 1:
+                    int todaysTemperature;
+                    todaysTemperature = random.Next(60, 101);
+                    Console.WriteLine("The temperature today is " + todaysTemperature);
                    
-                    return randtemp;
-                case "clear":
-                    randtemp = random.Next(60, 81);
-                    Console.WriteLine("The temperature today is " + randtemp);
+                    return todaysTemperature;
+                case 2:
+                    todaysTemperature = random.Next(60, 81);
+                    Console.WriteLine("The temperature today is " + todaysTemperature);
                    
-                    return randtemp;
-                case "cloudy":
-                    randtemp = random.Next(50, 71);
-                    Console.WriteLine("The temperature today is " + randtemp);
+                    return todaysTemperature;
+                case 3:
+                    todaysTemperature = random.Next(50, 71);
+                    Console.WriteLine("The temperature today is " + todaysTemperature);
                    
-                    return randtemp;
-                case "rainy":
-                    randtemp = random.Next(40, 61);
-                    Console.WriteLine("The temperature today is " + randtemp);
+                    return todaysTemperature;
+                case 4:
+                    todaysTemperature = random.Next(40, 61);
+                    Console.WriteLine("The temperature today is " + todaysTemperature);
                     
-                    return randtemp;
+                    return todaysTemperature;
                 default:
                     return getTemperature();
 

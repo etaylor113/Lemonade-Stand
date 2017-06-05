@@ -14,6 +14,8 @@ namespace Lemonade_Stand
         public int customerSugarPref;
         public int customerIceCubePref;
         public double customerPricePref;
+        public int todaysWeather;
+        public int todaysTemperature;
 
         public Customers()
         {
@@ -29,13 +31,37 @@ namespace Lemonade_Stand
             Console.WriteLine("customers tab");
 
             List<List<int>> customers = new List<List<int>>();
+
             int i = 0;
             int customerCount = 1;
+            int weatherType = 0;
+            int todaysWeather = Weather.todaysWeather;
 
-            while (i < 50)
-            {           
+            switch (todaysWeather)
+            {
+                case 1:
+                    weatherType += 300;
+                    break;
+                case 2:
+                    weatherType += 250;
+                    break;
+                case 3:
+                    weatherType += 100;
+                    break;
+                case 4:
+                    weatherType += 50;
+                    break;
+                default:
+                    Console.WriteLine("ERROR");
+                    break;
+            }
+
+
+
+            while (i < weatherType)
+            {
                 customers.Add(new List<int>());
-                
+
                 int customerLemonPref = getCustomerLemonPref();
                 int customerSugarPref = getCustomerSugarPref();
                 int customerIceCubePref = getCustomerIceCubePref();
@@ -45,7 +71,7 @@ namespace Lemonade_Stand
 
                 customers[0].Add(customerLemonPref);
                 Console.WriteLine("customer Lemon preference is " + customerLemonPref);
-              
+
                 customers[0].Add(customerSugarPref);
                 Console.WriteLine("customer Sugar preference is " + customerSugarPref);
 
@@ -55,23 +81,23 @@ namespace Lemonade_Stand
                 customers[0].Add(customerPricePref);
                 Console.WriteLine("customer Price preference is " + customerPricePref);
 
-                
-                    if (customerLemonPref == MyRecipe.numLemons && customerSugarPref == MyRecipe.numSugar && customerIceCubePref == MyRecipe.numIceCubes)
-                    {
-                        PiggyBank.playerMoney += MyRecipe.pricePerCup;
-                        Console.Write("\n--SOLD--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
-                        Thread.Sleep(1000);
-                    }
-                    else
-                    {
-                        Console.Write("\n--NO SALE--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
-                        Thread.Sleep(1000);
-                    }
-                        customerCount++;
-                        i++;
-                    }
-            Console.ReadLine();
 
+                if (customerLemonPref == MyRecipe.numLemons && customerSugarPref == MyRecipe.numSugar && customerIceCubePref == MyRecipe.numIceCubes)
+                {
+                    PiggyBank.playerMoney += MyRecipe.pricePerCup;
+                    Console.Write("\n--SOLD--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
+                    //Thread.Sleep(1000);
+                }
+                else
+                {
+                    Console.Write("\n--NO SALE--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
+                    //Thread.Sleep(1000);
+                }
+                customerCount++;
+                i++;
+            }
+
+            backToUI();
         }
 
 
@@ -108,9 +134,28 @@ namespace Lemonade_Stand
             return randPricePref;
         }
 
+        private void backToUI()
+        {
+            try
+            {
+                Console.WriteLine("Type '0' to continue.");
+                int goBack = Int32.Parse(Console.ReadLine());
 
+                switch (goBack)
+                {
+                    case 0:
+                        break;
+                    default:
+                        backToUI();
+                        break;
+                }
+            }
+            catch
+            {
+                backToUI();
+            }
 
-
+        }
 
     }
 }
