@@ -12,33 +12,34 @@ namespace Lemonade_Stand
     {
         Weather weather = new Weather();
         Customers customers = new Customers();
-        
 
+        static public int dayCount = 1;
     
 
-        public bool gotoNextDay()
+        public Day()
+        {
+            dayCount = 0;
+        }
+        public int gotoNextDay()
         {
             try
-            {
-                bool goNext;
+            {               
                 Console.WriteLine("Type '1' to go to UI, or type '2' to continue on to the next day.");
                 int nextDayChoice = Int32.Parse(Console.ReadLine());
                 Console.Clear();
                 switch (nextDayChoice)
                 {
                     case 1:
-                        goNext = true;
-                        return goNext;
-                    case 2:
-                        goNext = false;
+                        dayCount += 0;                       
+                        return dayCount;
+                    case 2:                    
                         getWeather();
                         getCustomers();
-                        gotoNextDay();
-                        return goNext;
+                        dayCount += 1;
+                        return dayCount;
                     default:
                         return gotoNextDay();
                 }
-
             }
             catch
             {
@@ -47,15 +48,12 @@ namespace Lemonade_Stand
                 return gotoNextDay();
             }
 
-
-
-
         }
 
 
 
 
-
+       
 
 
         public void getWeather()

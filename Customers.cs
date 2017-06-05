@@ -97,7 +97,7 @@ namespace Lemonade_Stand
                 i++;
             }
 
-            backToUI();
+            goBackToUI();
         }
 
 
@@ -134,25 +134,25 @@ namespace Lemonade_Stand
             return randPricePref;
         }
 
-        private void backToUI()
+        private void goBackToUI()
         {
             try
             {
                 Console.WriteLine("Type '0' to continue.");
                 int goBack = Int32.Parse(Console.ReadLine());
-
+                Console.Clear();
                 switch (goBack)
                 {
                     case 0:
                         break;
                     default:
-                        backToUI();
+                        getCustomers();
                         break;
                 }
             }
             catch
             {
-                backToUI();
+                goBackToUI();
             }
 
         }
