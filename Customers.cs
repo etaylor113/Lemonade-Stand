@@ -17,6 +17,7 @@ namespace Lemonade_Stand
         public int todaysWeather;
         public int todaysTemperature;
         public double todaysProfit;
+        public int cupCounter;
 
         public Customers()
         {
@@ -25,8 +26,7 @@ namespace Lemonade_Stand
             customerIceCubePref = 0;
             customerPricePref = 0;
             todaysProfit = 0;
-
-
+            cupCounter = 15;
         }
 
         public void getCustomers()
@@ -63,48 +63,61 @@ namespace Lemonade_Stand
 
             while (i < weatherType)
             {
-                customers.Add(new List<int>());
 
-                int customerLemonPref = getCustomerLemonPref();
-                int customerSugarPref = getCustomerSugarPref();
-                int customerIceCubePref = getCustomerIceCubePref();
-                int customerPricePref = getCustomerPricePref();
-                
+                int cupCounter = 15;
 
-                Console.WriteLine("\n---------------------------------------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("\nCUSTOMER #" + customerCount);
-            
-                customers[0].Add(customerLemonPref);
-                Console.WriteLine("customer Lemon preference is " + customerLemonPref);
-
-                customers[0].Add(customerSugarPref);
-                Console.WriteLine("customer Sugar preference is " + customerSugarPref);
-
-                customers[0].Add(customerIceCubePref);
-                Console.WriteLine("customer Ice preference is " + customerIceCubePref);
-
-                customers[0].Add(customerPricePref);
-                Console.WriteLine("customer Price preference is " + customerPricePref);
-
-
-                if (customerLemonPref == MyRecipe.numLemons && customerSugarPref == MyRecipe.numSugar && customerIceCubePref == MyRecipe.numIceCubes)
+                while (cupCounter >= 0)
                 {
-                    todaysProfit += MyRecipe.pricePerCup;
-                    Console.Write("\n--SOLD--\nYou've made $" + todaysProfit + " today.\n\n");
-                    //Thread.Sleep(1000);
+                    customers.Add(new List<int>());
+
+                    int customerLemonPref = getCustomerLemonPref();
+                    int customerSugarPref = getCustomerSugarPref();
+                    int customerIceCubePref = getCustomerIceCubePref();
+                    int customerPricePref = getCustomerPricePref();
+
+                    Console.WriteLine("\n---------------------------------------------------------------------------------------------------------------------------------------");
+                    Console.WriteLine("\nCUSTOMER #" + customerCount);
+
+                    customers[0].Add(customerLemonPref);
+                    Console.WriteLine("customer Lemon preference is " + customerLemonPref);
+
+                    customers[0].Add(customerSugarPref);
+                    Console.WriteLine("customer Sugar preference is " + customerSugarPref);
+
+                    customers[0].Add(customerIceCubePref);
+                    Console.WriteLine("customer Ice preference is " + customerIceCubePref);
+
+                    customers[0].Add(customerPricePref);
+                    Console.WriteLine("customer Price preference is " + customerPricePref);
+
+                    if (customerLemonPref == MyRecipe.numLemons && customerSugarPref == MyRecipe.numSugar && customerIceCubePref == MyRecipe.numIceCubes)
+                    {
+                        todaysProfit += MyRecipe.pricePerCup;
+                        cupCounter -= 1;
+                        Inventory.totalLemons -= MyRecipe.numLemons;
+                        Console.Write("\n--SOLD--\nYou've made $" + todaysProfit + " today.\n\n");
+                        //Thread.Sleep(1000);
+                    }
+                    else
+                    {
+                        Console.Write("\n--NO SALE--\nYou've made $" + todaysProfit + "today.\n\n");
+                        //Thread.Sleep(1000);
+                    }
+                    Console.WriteLine(cupCounter);
+                    if (cupCounter == 0)
+                    {
+                        cupCounter += 15;
+                    }
+                    customerCount++;
+                    i++;
                 }
-                else
-                {
-                    Console.Write("\n--NO SALE--\nYou've made $" + todaysProfit + "today.\n\n");
-                    //Thread.Sleep(1000);
-                }
-                customerCount++;
-                i++;
+
+
             }
-                PiggyBank.playerMoney += todaysProfit;
-                Console.WriteLine("Your current piggy bank amount is " + PiggyBank.playerMoney);
-                goBackToUI();
-         }
+            PiggyBank.playerMoney += todaysProfit;
+            Console.WriteLine("Your current piggy bank amount is $" + PiggyBank.playerMoney);
+            goBackToUI();
+        }
 
 
         public int getCustomerLemonPref()
