@@ -8,10 +8,10 @@ namespace Lemonade_Stand
 {
     public class PiggyBank
     {
-        public static double playerMoney = 20;
+        public static double playerMoney = 40.00;
         public PiggyBank()
         {
-            playerMoney = 20.00;
+            playerMoney = 40.00;
             
         }
 

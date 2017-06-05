@@ -16,6 +16,7 @@ namespace Lemonade_Stand
         public double customerPricePref;
         public int todaysWeather;
         public int todaysTemperature;
+        public double todaysProfit;
 
         public Customers()
         {
@@ -23,6 +24,8 @@ namespace Lemonade_Stand
             customerSugarPref = 0;
             customerIceCubePref = 0;
             customerPricePref = 0;
+            todaysProfit = 0;
+
 
         }
 
@@ -66,9 +69,11 @@ namespace Lemonade_Stand
                 int customerSugarPref = getCustomerSugarPref();
                 int customerIceCubePref = getCustomerIceCubePref();
                 int customerPricePref = getCustomerPricePref();
+                
+
                 Console.WriteLine("\n---------------------------------------------------------------------------------------------------------------------------------------");
                 Console.WriteLine("\nCUSTOMER #" + customerCount);
-
+            
                 customers[0].Add(customerLemonPref);
                 Console.WriteLine("customer Lemon preference is " + customerLemonPref);
 
@@ -84,21 +89,22 @@ namespace Lemonade_Stand
 
                 if (customerLemonPref == MyRecipe.numLemons && customerSugarPref == MyRecipe.numSugar && customerIceCubePref == MyRecipe.numIceCubes)
                 {
-                    PiggyBank.playerMoney += MyRecipe.pricePerCup;
-                    Console.Write("\n--SOLD--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
+                    todaysProfit += MyRecipe.pricePerCup;
+                    Console.Write("\n--SOLD--\nYou've made $" + todaysProfit + " today.\n\n");
                     //Thread.Sleep(1000);
                 }
                 else
                 {
-                    Console.Write("\n--NO SALE--\nYour current money is $" + PiggyBank.playerMoney + "\n\n");
+                    Console.Write("\n--NO SALE--\nYou've made $" + todaysProfit + "today.\n\n");
                     //Thread.Sleep(1000);
                 }
                 customerCount++;
                 i++;
             }
-
-            goBackToUI();
-        }
+                PiggyBank.playerMoney += todaysProfit;
+                Console.WriteLine("Your current piggy bank amount is " + PiggyBank.playerMoney);
+                goBackToUI();
+         }
 
 
         public int getCustomerLemonPref()
