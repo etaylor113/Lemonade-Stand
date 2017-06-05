@@ -8,10 +8,10 @@ namespace Lemonade_Stand
 {
     public class MyRecipe
     {
-        public int numLemons;
-        public int numSugar;
-        public int numIceCubes;
-        public double pricePerCup;
+        public static int numLemons;
+        public static int numSugar;
+        public static int numIceCubes;
+        public static double pricePerCup;
 
         public MyRecipe()
         {
@@ -51,7 +51,7 @@ namespace Lemonade_Stand
 
         public void getMyRecipe()
         {
-            if (numLemons == 0 && numSugar == 0 && numIceCubes == 0 && pricePerCup == 1.00)
+            if (numLemons == 0 && numSugar == 0 && numIceCubes == 0)
             {
                 Console.Clear();
                 Console.WriteLine("You have not set a recipe yet.");

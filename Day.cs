@@ -11,8 +11,10 @@ namespace Lemonade_Stand
     class Day
     {
         Weather weather = new Weather();
-        CustomerPreferences customers = new CustomerPreferences();
+        Customers customers = new Customers();
+        
 
+    
 
         public bool gotoNextDay()
         {
@@ -29,10 +31,22 @@ namespace Lemonade_Stand
                         return goNext;
                     case 2:
                         goNext = false;
+                        getWeather();
+                        getCustomers();
+                        int lemonPref = customers.getCustomerLemonPref();
+                            if (lemonPref == 5)
+                        {
+                            
+                        }
+                        int sugarPref = customers.getCustomerSugarPref();
+                        int iceCubePref = customers.getCustomerIceCubePref();
+                        int pricePref = customers.getCustomerPricePref();
+
                         return goNext;
                     default:
                         return gotoNextDay();
                 }
+
             }
             catch
             {
@@ -41,7 +55,13 @@ namespace Lemonade_Stand
                 return gotoNextDay();
             }
 
+
+
+
         }
+
+
+
 
 
 
@@ -49,6 +69,7 @@ namespace Lemonade_Stand
         public void getWeather()
         {
             weather.getTemperature();
+
         }
 
         public void getCustomers()

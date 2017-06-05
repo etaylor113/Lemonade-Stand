@@ -10,6 +10,7 @@ namespace Lemonade_Stand
     {
        public  Inventory inventory = new Inventory();
        public PiggyBank piggyBank = new PiggyBank();
+       public MyRecipe myRecipe = new MyRecipe();
         public void getPlayerInventory()
         {
             inventory.getInventory();
@@ -20,6 +21,9 @@ namespace Lemonade_Stand
             piggyBank.DisplayPlayerMoney();
         }
 
-
+        public void getRecipeMenu()
+        {
+            myRecipe.recipeMenu();
+        }
     }
 }

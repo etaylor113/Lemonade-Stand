@@ -12,7 +12,7 @@ namespace Lemonade_Stand
         Day day = new Day();
         Store store = new Store();
         goBankrupt bankrupt = new goBankrupt();
-        MyRecipe myRecipe = new MyRecipe();
+        
         public void startgame()
         {
             while (day.gotoNextDay() == true)
@@ -35,7 +35,7 @@ namespace Lemonade_Stand
                             store.gotoStore();
                             break;
                         case 4:
-                            myRecipe.recipeMenu();
+                            player.getRecipeMenu();
                             break;
                         case 5:
                             day.gotoNextDay();
