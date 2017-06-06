@@ -24,7 +24,7 @@ namespace Lemonade_Stand
         {
             try
             {               
-                Console.WriteLine("Type '1' to go to UI, or type '2' to continue on to the next day.");
+                Console.WriteLine("Type '1' to go to UI, or type '2' to continue on to the next day. \nBe sure you have purchased items from the store and set your recipe before continuing!");
                 int nextDayChoice = Int32.Parse(Console.ReadLine());
                 Console.Clear();
                 switch (nextDayChoice)
