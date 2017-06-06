@@ -11,8 +11,7 @@ namespace Lemonade_Stand
         static public int todaysWeather;
         static public int todaysTemperature;
         public int getRandomWeather()
-        {
-            
+        {            
             Random random = new Random();
             todaysWeather = random.Next(1, 5);
 
@@ -52,27 +51,22 @@ namespace Lemonade_Stand
                 case 1:
                     int todaysTemperature;
                     todaysTemperature = random.Next(60, 101);
-                    Console.WriteLine("The temperature today is " + todaysTemperature);
-                   
+                    Console.WriteLine("The temperature today is " + todaysTemperature);                  
                     return todaysTemperature;
                 case 2:
                     todaysTemperature = random.Next(60, 81);
-                    Console.WriteLine("The temperature today is " + todaysTemperature);
-                   
+                    Console.WriteLine("The temperature today is " + todaysTemperature);                   
                     return todaysTemperature;
                 case 3:
                     todaysTemperature = random.Next(50, 71);
-                    Console.WriteLine("The temperature today is " + todaysTemperature);
-                   
+                    Console.WriteLine("The temperature today is " + todaysTemperature);                  
                     return todaysTemperature;
                 case 4:
                     todaysTemperature = random.Next(40, 61);
-                    Console.WriteLine("The temperature today is " + todaysTemperature);
-                    
+                    Console.WriteLine("The temperature today is " + todaysTemperature);                   
                     return todaysTemperature;
                 default:
                     return getTemperature();
-
             }
         }
 

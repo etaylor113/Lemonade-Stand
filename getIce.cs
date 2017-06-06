@@ -10,8 +10,6 @@ namespace Lemonade_Stand
     {
         public void getStoresIce()
         {
-
-
             double iceCubePrice = .05;
 
             Console.WriteLine("Ice cubes are five cents a piece. How many would you like to buy? \nType number for quantity.");
@@ -38,10 +36,8 @@ namespace Lemonade_Stand
                 Console.WriteLine("Insufficent funds.");
                 Console.Read();
                 Console.Clear();
-
             }
             Console.Clear();
         }
-
     }
 }

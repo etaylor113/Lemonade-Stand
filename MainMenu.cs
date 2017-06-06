@@ -32,7 +32,5 @@ namespace Lemonade_Stand
                 StartGame();
             }
         }
-
-
     }
 }

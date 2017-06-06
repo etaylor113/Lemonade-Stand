@@ -10,7 +10,6 @@ namespace Lemonade_Stand
     {
         public void getStoresSugar()
         {
-
             double sugarPrice = .70;
 
             Console.WriteLine("Sugar is 70 cents a packet. How many would you like to buy? \nType number for quantity.");
@@ -39,6 +38,5 @@ namespace Lemonade_Stand
             }
             Console.Clear();
         }
-
     }
 }

@@ -14,7 +14,6 @@ namespace Lemonade_Stand
         Customers customers = new Customers();
 
         static public int dayCount = 1;
-    
 
         public Day()
         {
@@ -47,14 +46,7 @@ namespace Lemonade_Stand
                 gotoNextDay();
                 return gotoNextDay();
             }
-
         }
-
-
-
-
-       
-
 
         public void getWeather()
         {
@@ -66,10 +58,5 @@ namespace Lemonade_Stand
         {
             customers.getCustomers();
         }
-
-
-
-
-
     }
 }

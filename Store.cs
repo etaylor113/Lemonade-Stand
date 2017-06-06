@@ -13,7 +13,6 @@ namespace Lemonade_Stand
         getSugar sugar = new getSugar();
         getIce ice = new getIce();
 
-
         public void gotoStore()
         {
             try
@@ -48,15 +47,11 @@ namespace Lemonade_Stand
             {
                 gotoStore();
             }
-}
-             private void goBackToUI()
+        }
+        private void goBackToUI()
         {
             Game game = new Game();
             game.startgame();
         }
-
-    
-
-
     }
 }

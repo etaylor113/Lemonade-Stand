@@ -14,8 +14,7 @@ namespace Lemonade_Stand
             playerMoney = 40.00;
             
         }
-
-        
+  
         public void DisplayPlayerMoney()
         {
             try
@@ -33,7 +32,6 @@ namespace Lemonade_Stand
                         break;
                 }
             }
-
             catch
             {
                 Console.Clear();

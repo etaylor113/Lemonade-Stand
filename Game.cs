@@ -15,8 +15,6 @@ namespace Lemonade_Stand
         
         public void startgame()
         {
-
-
             while (Day.dayCount <= 7)
             {
                 try
@@ -56,10 +54,5 @@ namespace Lemonade_Stand
                 }
             }
         }
-
-
-        
-
-
     }
 }

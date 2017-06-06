@@ -12,8 +12,6 @@ namespace Lemonade_Stand
         {
             MainMenu Inititate = new MainMenu();
             Inititate.StartGame();
-       
-
         }
     }
 }

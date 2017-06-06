@@ -21,8 +21,6 @@ namespace Lemonade_Stand
             pricePerCup = 0;
         }
 
-
-
         public void recipeMenu()
         {
             try
@@ -48,7 +46,6 @@ namespace Lemonade_Stand
             }
         }
 
-
         public void getMyRecipe()
         {
             if (numLemons == 0 && numSugar == 0 && numIceCubes == 0)
@@ -56,7 +53,6 @@ namespace Lemonade_Stand
                 Console.Clear();
                 Console.WriteLine("You have not set a recipe yet.");
                 goBackToUI();
-
             }
             else
             {
@@ -65,7 +61,6 @@ namespace Lemonade_Stand
                 goBackToUI();
             }
         }
-
 
         public void setMyRecipe()
         {
@@ -78,7 +73,6 @@ namespace Lemonade_Stand
             double recipePrice = getRecipePrice();
             Console.WriteLine("You have set price per cup at $" + recipePrice);
             goBackToUI();
-
         }
 
         public int getLemonRecipe()

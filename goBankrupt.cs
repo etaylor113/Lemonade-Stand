@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Lemonade_Stand
 {
     class goBankrupt
-    {
-
+    { 
         public void declarebankrupcy()
         {
             try
@@ -37,6 +36,5 @@ namespace Lemonade_Stand
                 declarebankrupcy();
             } 
         }
-  
     }
 }

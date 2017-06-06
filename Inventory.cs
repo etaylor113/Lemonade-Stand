@@ -25,7 +25,6 @@ namespace Lemonade_Stand
         {
             try
             {
-
                 Console.WriteLine("Welcome to your inventory!");
                 Console.WriteLine("Total cups - " + totalCups + "\nTotal Lemons - " + totalLemons + "\nTotal Sugar - " + totalSugar + "\nTotal Ice Cubes - " + totalIceCubes + "\nType '0' to go back.");
                 int goBackToPlayerUI = Int32.Parse(Console.ReadLine());

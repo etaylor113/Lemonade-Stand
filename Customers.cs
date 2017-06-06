@@ -9,7 +9,7 @@ namespace Lemonade_Stand
 {
     public class Customers
     {
-
+        Random random = new Random();
         public int customerLemonPref;
         public int customerSugarPref;
         public int customerIceCubePref;
@@ -27,13 +27,11 @@ namespace Lemonade_Stand
             customerPricePref = 0;
             todaysProfit = 0;
             cupCounter = 15;
-
         }
 
         public void getCustomers()
         {
             List<List<int>> customers = new List<List<int>>();
-
             int i = 0;
             int customerCount = 1;
             int weatherType = 0;
@@ -112,13 +110,11 @@ namespace Lemonade_Stand
             PiggyBank.playerMoney += todaysProfit;
             Console.WriteLine("Your current piggy bank amount is $" + PiggyBank.playerMoney);
             goBackToUI();
-        }
-
+            }
 
         public int getCustomerLemonPref()
         {
-            int randLemonPref;
-            Random random = new Random();
+            int randLemonPref;           
             randLemonPref = random.Next(4, 6);
             return randLemonPref;
         }
@@ -126,17 +122,14 @@ namespace Lemonade_Stand
         public int getCustomerSugarPref()
         {
             int randSugarPref;
-            Random random = new Random();
             randSugarPref = random.Next(2, 4);
             return randSugarPref;
         }
 
-
         public int getCustomerIceCubePref()
         {
             int randIceCubePref;
-            Random random = new Random();
-            randIceCubePref = random.Next(2, 4);
+            randIceCubePref = random.Next(2, 5);
             return randIceCubePref;
         }
 
@@ -168,8 +161,6 @@ namespace Lemonade_Stand
             {
                 goBackToUI();
             }
-
         }
-
     }
 }
